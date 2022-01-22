@@ -22,6 +22,9 @@
     <UpToDateCheckInput Include="..\Anteccq.Dev.Shared\**\*.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Remove="wwwroot\staticwebapp.config.json" />
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="WasmCSS\Fonts.css" />
     <EmbeddedResource Include="WasmScripts\AppManifest.js" />
   </ItemGroup>
@@ -37,6 +40,9 @@
 		-->
     <None Include="Program.cs" />
     <None Include="LinkerConfig.xml" />
+    <None Include="wwwroot\staticwebapp.config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="wwwroot\web.config" />
   </ItemGroup>
   <ItemGroup>
